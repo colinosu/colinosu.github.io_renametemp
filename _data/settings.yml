@@ -1,0 +1,35 @@
+#-------------------------------
+# General Site Settings
+
+email: osullivancj@gmail.com
+
+
+menu:
+- {name: About Me, url: '#about-me'}
+- {name: Work, url: '#work'}
+- {name: Contact, url: '#contact'}
+
+#-------------------------------
+# SEO Section
+
+
+seo:
+  description: 'Front End Developer for hire.'
+
+
+#-------------------------------
+# About Section
+
+blurb: >
+  My name is Colin, and I am a front-end developer based in Los Angeles, California. I am passionate about solving problems while exploring new ways to build the web. I am currently available for a fulltime position or freelance work.
+
+
+skills:
+- {name: HTML, value: '9'}
+- {name: CSS, value: '8'}
+- {name: JavaScript, value: '7'}
+- {name: AngularJS, value: '6'}
+- {name: Learning, value: '10'}
+- {name: Design, value: '7'}
+- {name: Backend, value: '5'}
+- {name: Organization, value: '9'}

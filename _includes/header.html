@@ -1,0 +1,12 @@
+<header id="header">
+
+  <nav>
+    {% for item in site.data.settings.menu %}
+      <a href="{{ item.url }}">{{ item.name }}</a>
+    {% endfor %}
+  </nav>
+
+  <h1><span>Colin O'Sullivan</span></h1>
+  <p class="kicker">Front End Developer</p>
+
+</header>
