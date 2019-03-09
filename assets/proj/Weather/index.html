@@ -29,42 +29,42 @@
           <button class="btn btn-default right" type="submit" ng-click="clear()">Reset</button>
         </div>
 
-        <div id="results" ng-show ="weather.query.count === 0" class="col-md-6">
+        <div id="results" ng-if ="getForLen(weather)" class="col-md-6">
           <div class="alert alert-danger" role="alert">No result for the City of Zip</div>
         </div>
 
-        <div id="results" ng-show ="weather.query.count > 0" class="col-md-6">
+        <div id="results" ng-show ="weather" class="col-md-6">
           <div id="details" ng-show="today">
             <div class="row">
-              <div class="col-md-1"><i class="wi wi-yahoo-{{weather.query.results.channel.item.condition.code}}"></i></div>
+              <div class="col-md-1"><i class="wi wi-yahoo-{{weather.current_observation.condition.code}}"></i></div>
               <div class="col-md-11">
-                <h2>{{weather.query.results.channel.item.condition.text}}</h2>
+                <h2>{{weather.current_observation.condition.text}}</h2>
                 <div class="degree">
-                  <span id="currentTemp">{{weather.query.results.channel.item.condition.temp}}&deg</span>
+                  <span id="currentTemp">{{weather.current_observation.condition.temperature}}&deg</span>
                   <div id="highlow">
-                    <span id="high">{{weather.query.results.channel.item.forecast[0].high}}&deg /</span>
-                    <span id="low">{{weather.query.results.channel.item.forecast[0].low}}&deg</span>
+                    <span id="high">{{weather.forecast[0].high}}&deg /</span>
+                    <span id="low">{{weather.forecast[0].low}}&deg</span>
                   </div>
                 </div>
                 <div class="clearfix"></div>
                 <div id="timeplace">
-                  <span id="city">{{weather.query.results.channel.location.city}}
-                  {{weather.query.results.channel.location.region}}
-                  {{weather.query.results.channel.location.country}}
+                  <span id="city">{{weather.location.city}}
+                  {{weather.location.region}}
+                  {{weather.location.country}}
                   </span>
-                  <div id="time">{{weather.query.results.channel.item.condition.date}}</div>
+                  <div id="time">{{weather.current_observation.condition.text}}</div>
                   <!--<div id="weather">{{weather.query.results.channel.item.condition.text}}</div>-->
                 </div>
 
                 <div class="row">
                   <div id="PWH" class="col-md-5">
-                    <div>Wind: <span>{{weather.query.results.channel.wind.speed}}
-                                     {{weather.query.results.channel.units.speed}}
+                    <div>Wind: <span>{{weather.current_observation.wind.speed}}
+                                     {{windSpeed}}
                                </span>
                     </div>
-                    <div>Humidity: <span>{{weather.query.results.channel.atmosphere.humidity}}%</span></div>
-                    <div id="sunrise">Sunrise: {{formatTime(weather.query.results.channel.astronomy.sunrise)}}</div>
-                    <div id="sunset">Sunset: {{formatTime(weather.query.results.channel.astronomy.sunset)}}</div>
+                    <div>Humidity: <span>{{weather.current_observation.atmosphere.humidity}}%</span></div>
+                    <div id="sunrise">Sunrise: {{formatTime(weather.current_observation.astronomy.sunrise)}}</div>
+                    <div id="sunset">Sunset: {{formatTime(weather.current_observation.astronomy.sunset)}}</div>
                   </div>
                   <div class="col-md-7">
                     <button class="btn btn-default btn-large" type="button" ng-click="toggle();">5 day forecast</button>
@@ -77,9 +77,9 @@
             <div class="row">
               <div class="col-md-1">&nbsp;</div>
               <div class="col-md-11">
-                <div ng-repeat="forecast in weather.query.results.channel.item.forecast" ng-if="$index > 0 && $index < 6">
+                <div ng-repeat="forecast in weather.forecasts" ng-if="$index > 0 && $index < 6">
                   <p class="forecast">
-                    <span class="date5">{{ formatDate(forecast.date) }}</span>
+                    <span class="date5">{{ forecast.day }}</span>
                     <i class="wi wi-yahoo-{{forecast.code}}"></i>
                     <span class="degree5">{{ forecast.high }}&deg; | {{ forecast.low }}&deg;</span>
                   </p>
@@ -93,6 +93,8 @@
     </div>
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
 <script src="js/index.js"></script>
 </html>
