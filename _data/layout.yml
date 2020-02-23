@@ -1,0 +1,15 @@
+
+# Images
+
+logo: "logo.svg"
+hero: "hero-bg.jpg"
+avatar: "travitar.jpg"
+
+# Colors
+
+accent: "#335a7c"
+
+textColor: "#666"
+headlineColor: "#333"
+bgcolor: "#e5eaee"
+documentBackgroundColor: "#fff"
