@@ -2,14 +2,13 @@
   "name": "videos",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://colinosu.github.io/hello",
+  "homepage": "http://colinosu.github.io/",
   "engines": {
     "npm": "6.5.0",
     "node": "11.6.0"
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "gh-pages": "^2.0.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-router-dom": "^4.4.0-beta.7",
@@ -31,5 +30,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  }
 }
