@@ -27,9 +27,7 @@ blurb: >
 skills:
 - {name: HTML, value: '9'}
 - {name: CSS, value: '8'}
-- {name: JavaScript, value: '7'}
+- {name: JavaScript, value: '8'}
 - {name: ReactJS, value: '6'}
-- {name: Learning, value: '10'}
-- {name: Design, value: '7'}
-- {name: Backend, value: '5'}
-- {name: Organization, value: '9'}
+- {name: Design, value: '6'}
+- {name: Backend, value: '4'}
