@@ -41,7 +41,7 @@ function projTransition(){
 			$(".section-work").css("height","100%");
 			$("section").fadeIn(300);
 			$(".project-display").remove()
-			$(this).hide();
+			$(this).hide()
 		});
 }
 
