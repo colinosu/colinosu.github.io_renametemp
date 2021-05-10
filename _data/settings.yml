@@ -21,13 +21,14 @@ seo:
 # About Section
 
 blurb: >
-  My name is Colin, and I am a front-end developer based in Columbus, Ohio. I am passionate about solving problems while exploring new ways to build the web. I am currently available for a fulltime position or freelance work.
+  My name is Colin, and I am a front-end developer based in Ohio. I am passionate about solving problems while exploring new ways to build the web. I am currently available for a fulltime position or freelance work.
 
 
 skills:
-- {name: HTML, value: '9'}
-- {name: CSS, value: '7'}
+
 - {name: JavaScript, value: '8'}
-- {name: ReactJS, value: '6'}
+- {name: CSS, value: '8'}
+- {name: ReactJS, value: '7'}
+- {name: SQL, value: '6'}
 - {name: Design, value: '5'}
 - {name: Backend, value: '5'}
